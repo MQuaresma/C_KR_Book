@@ -1,0 +1,37 @@
+#CHAPTER 4
+-Macros are a good alternative to functions as they don't yeld the drawback of calling overhead since they are replaced in-line
+
+-Register variables (declared as register <normal var declaration>) are a good way to hint to "tell"  the compiler that this variables should be put in registers. This are usefull for variables that are often used, thus enhancing the program performance.
+
+-All external and static variables are initialized to 0, the others have what is usually known as   garbage
+
+-Static external variables are usefull to prevent other functions in other source files to acess, and also to keep the value of that variable after function runtime. Only initialized once!!!
+
+
+
+#CHAPTER 5
+-A smart way to think of pointer declaration is as follows: double *ip, number; both *ip and number    will result in a double type expression
+
+-Pointers can only point to their type, however void pointers can point to any type of variable but   cannot be dereferenced
+
+-Both & and *(dereferencing) have higher precedence than arithemtic operators, however, sometimes     parenthesis are needed due to the way operators such as ++ associate (from left to right)
+
+-Using pointers instead of arrays is usually faster. This probalby applies to older compilers since   optimization wasn't as efficient as today 
+
+-size_t is the advised way to store info about storage, which is the unsigned integer type returned by    sizeof
+
+-stddef contains a data type ptrdiff_t that is large enough to hold the difference between two       pointers, which may sometimes not be the case for a data type such as integer
+
+-Pointers, as opposed to array names, are variables.   
+
+-As far as functions are concerned recieving a pointer or an array as a parameter are the same thing
+
+-In C 0(zero)/NULL is guaranteed to never be a valid address of data therefore it is safe to assign/return it as an exception 
+
+-Pointers can be compared and subtracted between themselves if they belong to the same array or if they refer to the last+1 element of that array
+
+-Two dimensional arrays can be thought of as a one dimensional array which has arrays as elements
+
+-When passing a multidimensional array as a function remember that you're passing a pointer to an array so therefore you have to specify the no of elements of the array that is being pointed at.
+
+-When the size of the array is not specified in the declaration the compiler counts the no of initalizers and fills the correct numbers 
