@@ -4,6 +4,5 @@
 
 
 #CHAPTER 5
--Search how and where constants are stored 
--Are pointers still more efficient than arrays (nowadays)?
 -Exe5-3 && 5-4
+-Exe5-9

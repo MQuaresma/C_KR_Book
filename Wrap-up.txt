@@ -35,3 +35,7 @@
 -When passing a multidimensional array as a function remember that you're passing a pointer to an array so therefore you have to specify the no of elements of the array that is being pointed at.
 
 -When the size of the array is not specified in the declaration the compiler counts the no of initalizers and fills the correct numbers 
+
+-The format argument of a printf can be an expression (see sec 5.10)
+
+- 
