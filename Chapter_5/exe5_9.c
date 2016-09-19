@@ -9,16 +9,17 @@ static char daytab[2][13]={
 /* day_of_the_year: set day of the year from month and day */
 int day_of_the_year(int month, int day, int year){
     int i, leap;
+    size_t size = sizeof(char);
 
     leap = year%4 == 0 && year%100 != 0 || year%400 == 0;
 
-    if(month > 12 || month < 1 || day > daytab[leap][month] || day < 1 || year < 0){
+    if(month > 12 || month < 1 || day > *(daytab[0]+(leap*13+month)) || day < 1 || year < 0){
         printf("Invalid date\n");
         return -1;
     }
 
     for(i = 1; i < month; i ++)
-        day += daytab[leap][i];
+        day +=  *(daytab[0]+(leap*13+month));       /*sizeof is used for portability reasons */
 
     return day;
 }
@@ -34,7 +35,7 @@ void month_day(int year, int yearday, int *mon, int *day){
         return;
     }
 
-    for(i = 1; yearday > daytab[leap][i]; yearday -=daytab[leap][i], i ++); 
+    for(i = 1; yearday >  *(daytab[0]+(leap*13+i)); yearday -= *(daytab[0]+(leap*13+i)), i ++); 
 
     printf("Month: %d \t Day: %d\n", i, yearday);
     *day = yearday;
