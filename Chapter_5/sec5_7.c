@@ -7,7 +7,7 @@ static char daytab[2][13]={
 
 
 /* day of the year: set day of the year from month and day */
-int day_of_the_year(int month, int year, int day){
+int day_of_year(int month, int year, int day){
 
     int i, leap;
     leap = year%4 == 0 && year%100 != 0 || year%400 == 0;
@@ -30,4 +30,14 @@ void month_day(int year, int yearday, int *pmonth, int *pday){
 
     *pmonth = i; 
     *pday = yearday;
+}
+
+main(void){
+
+
+    int year, day;
+
+    printf("%d\n", day_of_year(3, 2015, 15));
+    
+    return 0;
 }
