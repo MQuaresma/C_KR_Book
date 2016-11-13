@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include "header.h"
 
 /* dcl: parse a declarator */
 void dcl(void){
@@ -25,7 +25,7 @@ void dirdcl(void){
         strcpy(name, token);
     else
         printf("error: expected name or (dcl)\n");
-    while((type = gettoken()) == PARENS || type = BRACKETS)
+    while((type = gettoken()) == PARENS || type == BRACKETS){
         if(type == PARENS)
             strcat(out, " function returning");
         else{
@@ -33,4 +33,5 @@ void dirdcl(void){
             strcat(out, token);
             strcat(out, " of");
         }
+	}
 }

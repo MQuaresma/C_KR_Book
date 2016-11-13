@@ -1,26 +1,24 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #define MAXINPUT 1000
 #define LINES 100000
 
-static int sp = 0;
-char lines[LINES];
-
 int getLine(char *s, int maxinput);
 int readline(char *lineptr[], int nlines){
 
-    char input[MAXINPUT]; 
+    char input[MAXINPUT], *p; 
     int i = 0, j;
 
-    while(sp < LINES && i < nlines && (j = getLine(input, MAXINPUT))){
-        if(j+sp >= LINES-1){
-            printf("Not enough space\n");
-            return -1;
-        }
-        strcpy(lines+sp, input);
-        lines[j+sp] = '\0';
-        lineptr[i ++] = lines+sp;
-        sp = sp+1+j;
+    while(i < nlines && (j = getLine(input, MAXINPUT))){
+        p = (char *)malloc(sizeof(char) * (j+1));
+		if(*p == NULL){
+			printf("Not enough space");
+			return -1;
+		}
+        strcpy(p, input);
+        *(p + j) = '\0';
+        lineptr[i ++] = p;
     }
 
     return i;
@@ -43,10 +41,4 @@ int getLine(char *s, int maxinput){
     *s = '\0';
     return i;
 
-}
-
-
-void resetCounters(void){
-	sp = 0;
-	
 }

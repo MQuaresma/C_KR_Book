@@ -38,4 +38,4 @@
 
 -The format argument of a printf can be an expression (see sec 5.10)
 
-- 
+-  String constants are stored as pointer to the first character of the string, therefore they can be assigned to pointers without being copied
