@@ -1,11 +1,11 @@
 #CHAPTER 4
 -Macros are a good alternative to functions as they don't yeld the drawback of calling overhead since they are replaced in-line
 
--Register variables (declared as register <normal var declaration>) are a good way to hint to "tell"  the compiler that this variables should be put in registers. This are usefull for variables that are often used, thus enhancing the program performance.
+-Register variables (declared as register <normal var declaration>) are a good way to hint the compiler that this variables should be put in registers. This are usefull for variables that are often used, thus enhancing the program performance.
 
--All external and static variables are initialized to 0, the others have what is usually known as   garbage
+-All external and static variables are initialized to 0, the others have what is usually known as garbage
 
--Static external variables are usefull to prevent other functions in other source files to acess, and also to keep the value of that variable after function runtime. Only initialized once!!!
+-Static external variables are usefull to prevent other functions in other source files to access, and also to keep the value of that variable after function runtime. Only initialized once!!!
 
 
 
@@ -24,7 +24,7 @@
 
 -Pointers, as opposed to array names, are variables.   
 
--As far as functions are concerned recieving a pointer or an array as a parameter are the same thing
+-As far as functions are concerned recieving a pointer or an array as a parameter is the same thing, not taking into account the possibilty of aliasing
 
 -In C 0(zero)/NULL is guaranteed to never be a valid address of data therefore it is safe to assign/return it as an exception 
 
@@ -38,4 +38,4 @@
 
 -The format argument of a printf can be an expression (see sec 5.10)
 
--  String constants are stored as pointer to the first character of the string, therefore they can be assigned to pointers without being copied
+-String constants are stored as pointer to the first character of the string, therefore they can be assigned to pointers without being copied

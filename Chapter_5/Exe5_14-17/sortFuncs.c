@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <ctype.h>
+#include "sorting.h"
 
 int numcmp(char *s1, char *s2){
 
@@ -45,17 +46,16 @@ int strCmpLower(char *s1, char *s2){
 int dirCompare(char *s1, char *s2){
 
 	while(*s1 && *s2){
-		while(s1 && !(isalnum(*s1) || isspace(*s1)))
+		while(s1 && !(isalpha(*s1) || isspace(*s1)))
 			s1 ++;
 		while(s2 && !(isalnum(*s2) || isspace(*s2)))
 			s2 ++;
 		if(*s1 != *s2) break;
-		
 		s1 ++;
 		s2 ++;
 	}
 
-	return s1 - s2;
+	return *s1 - *s2;
 }
 
 int indexSorting(char *s1, char *s2){

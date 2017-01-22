@@ -6,6 +6,7 @@
 #CHAPTER 5
 -Exe5-3 && 5-4
 -Exe5-9
+-Exe14-17
 -Sec5-12
 
 #CHAPTER 6 

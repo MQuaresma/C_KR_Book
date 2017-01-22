@@ -13,12 +13,11 @@ int readline(char *lineptr[], int nlines){
     int i = 0, j;
 
     while(sp < LINES && i < nlines && (j = getLine(input, MAXINPUT))){
-        if(j+sp >= LINES-1){
+        if(j+sp >= LINES){
             printf("Not enough space\n");
             return -1;
         }
         strcpy(lines+sp, input);
-        lines[j+sp] = '\0';
         lineptr[i ++] = lines+sp;
         sp = sp+1+j;
     }
