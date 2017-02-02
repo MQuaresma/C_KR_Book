@@ -38,4 +38,11 @@
 
 -The format argument of a printf can be an expression (see sec 5.10)
 
--String constants are stored as pointer to the first character of the string, therefore they can be assigned to pointers without being copied
+-String constants are stored as pointer to the first character of the string, therefore they can be assigned to pointers without being copied, they're stored in the 
+.rodata segment, which is a read-only segment of memory, meaning they can't be modified unless copied
+
+#CHAPTER 6
+-Bit fields are a smart way to store TRUE|FALSE values when space is of the essence. These can only be declared within structures and the syntax is as follows:
+    type-specifier declarator opt: constant-expression
+ where constant-expression is the width of the field, which can't exceed the size of the type of the field. Bit fields can be used as normal integers.
+
