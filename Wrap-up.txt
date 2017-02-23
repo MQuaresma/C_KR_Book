@@ -46,3 +46,8 @@
     type-specifier declarator opt: constant-expression
  where constant-expression is the width of the field, which can't exceed the size of the type of the field. Bit fields can be used as normal integers.
 
+#CHAPTER 7
+-The stdarg hearder has macros used to go throught the list of arguments a function recieves, the type used is va_list
+-FILE is a structure defined in the stdio header that holds the file name, current reading position and whether the file is being written or read to
+-stdin, stdout and stderr are all file pointers (FILE *) that are used in every C program
+-exit() is a function defined in the stdlib header that halts the execution of the program as soon as it's called, it    recieves an argument that signals the success(=0) or failure(!=0) of the program that can be accessed from the program that called it

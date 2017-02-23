@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <ctype.h>
 
 int getch(void);
@@ -25,7 +26,7 @@ int getin(int *pn){
     sign= (c=='-')?-1 : 1;
     if(c == '+' || c == '-') c = getch();
 
-    for(*pn = 0; isidigit(c); c = getch())
+    for(*pn = 0; isdigit(c); c = getch())
         *pn = 10 * (*pn) + (c - '0');
         
     *pn *= sign;

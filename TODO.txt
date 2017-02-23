@@ -1,12 +1,14 @@
 #CHAPTER 4
--Implement a quick sort function as exercise
--Review polish calculator 
+*Implement a quick sort function as exercise
+*Review polish calculator 
 
 
 #CHAPTER 5
--Exe5-3 && 5-4
--Exe5-9
--Exe14-17
--Sec5-12
+*Exe5-3 && 5-4
+*Exe5-9
+*Exe14-17
+*Sec5-12
 
-#CHAPTER 6 
+#CHAPTER 7
+*Exe 7-3
+*Exe7-4 && 7-5
