@@ -1,22 +1,22 @@
 #CHAPTER 4
--Macros are a good alternative to functions as they don't yeld the drawback of calling overhead since they are replaced in-line
+-Macros are a good alternative to functions as they don't yeild the drawback of calling overhead since they are replaced in-line
 
--Register variables (declared as register <normal var declaration>) are a good way to hint the compiler that this variables should be put in registers. This are usefull for variables that are often used, thus enhancing the program performance.
+-Register variables (declared as register <normal var declaration>) are a good way to hint the compiler that this variables should be put in registers. This are useful for variables that are often used, thus enhancing the program performance.
 
 -All external and static variables are initialized to 0, the others have what is usually known as garbage
 
--Static external variables are usefull to prevent other functions in other source files to access, and also to keep the value of that variable after function runtime. Only initialized once!!!
+-Static external variables are useful to prevent other functions in other source files to access, and also to keep the value of that variable after function runtime. Only initialized once!!!
 
 
 
 #CHAPTER 5
--A smart way to think of pointer declaration is as follows: double *ip, number; both *ip and number    will result in a double type expression
+-A smart way to think of pointer declaration is as follows: double *ip, number; both *ip and number will result in a double type expression
 
 -Pointers can only point to their type, however void pointers can point to any type of variable but   cannot be dereferenced
 
--Both & and *(dereferencing) have higher precedence than arithemtic operators, however, sometimes     parenthesis are needed due to the way operators such as ++ associate (from left to right)
+-Both & and *(dereferencing) have higher precedence than arithmetic operators, however, sometimes     parenthesis are needed due to the way operators such as ++ associate (from left to right)
 
--Using pointers instead of arrays is usually faster. This probalby applies to older compilers since   optimization wasn't as efficient as today 
+-Using pointers instead of arrays is usually faster. This probably applies to older compilers since   optimization wasn't as efficient as today 
 
 -size_t is the advised way to store info about storage, which is the unsigned integer type returned by    sizeof
 
@@ -24,7 +24,7 @@
 
 -Pointers, as opposed to array names, are variables.   
 
--As far as functions are concerned recieving a pointer or an array as a parameter is the same thing, not taking into account the possibilty of aliasing
+-As far as functions are concerned receiving a pointer or an array as a parameter is the same thing, not taking into account the possibility of aliasing
 
 -In C 0(zero)/NULL is guaranteed to never be a valid address of data therefore it is safe to assign/return it as an exception 
 
@@ -47,7 +47,7 @@
  where constant-expression is the width of the field, which can't exceed the size of the type of the field. Bit fields can be used as normal integers.
 
 #CHAPTER 7
--The stdarg hearder has macros used to go throught the list of arguments a function recieves, the type used is va_list
+-The stdarg header has macros used to go through the list of arguments a function receives, the type used is va_list
 -FILE is a structure defined in the stdio header that holds the file name, current reading position and whether the file is being written or read to
 -stdin, stdout and stderr are all file pointers (FILE *) that are used in every C program
--exit() is a function defined in the stdlib header that halts the execution of the program as soon as it's called, it    recieves an argument that signals the success(=0) or failure(!=0) of the program that can be accessed from the program that called it
+-exit() is a function defined in the stdlib header that halts the execution of the program as soon as it's called, it    receives an argument that signals the success(=0) or failure(!=0) of the program that can be accessed from the program that called it

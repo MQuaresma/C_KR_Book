@@ -1,0 +1,11 @@
+## Binaries
+**/*.out
+
+## macOS
+**/._*
+**/.DS_Store
+
+## Others
+**/*.log
+**/*.aux
+.vscode/**
