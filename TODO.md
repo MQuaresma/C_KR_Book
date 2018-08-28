@@ -16,5 +16,7 @@
 - [ ] Exe7-4 && 7-5
 
 ## Improve
+- [ ] Documentation
+- Wrap-up in Markdown
 
 ## Fix
