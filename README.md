@@ -1,4 +1,4 @@
-# C_KR_Book
+# The C Programming Language Walkthrough
 
 Exercises walkthrough for the famous **The C Programming Language (2nd Ed.)**
 
