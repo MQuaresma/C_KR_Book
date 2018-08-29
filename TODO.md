@@ -17,6 +17,6 @@
 
 ## Improve
 - [ ] Documentation
-- Wrap-up in Markdown
+- [ ] Wrap-up in Markdown
 
 ## Fix

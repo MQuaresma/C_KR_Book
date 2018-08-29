@@ -1,6 +1,5 @@
 # The C Programming Language Walkthrough
-
-Exercises walkthrough for the famous **The C Programming Language (2nd Ed.)**
+Exercise walkthrough for the famous **The C Programming Language (2nd Ed.)**
 
 # Usage
 ## Compile
